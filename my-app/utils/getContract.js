@@ -1,4 +1,4 @@
-import { CONTRACT_ADDRESS,CONTRACT_ABI } from "../../constants";
+import { CONTRACT_ADDRESS,CONTRACT_ABI } from "../constants";
 import { ethers } from "ethers";
 
 export default function getContract() {

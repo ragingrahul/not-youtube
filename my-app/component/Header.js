@@ -3,7 +3,7 @@ import { AiOutlinePlusCircle } from "react-icons/ai";
 import { BiCloud } from "react-icons/bi";
 import { ConnectButton } from "./ConnectButton";
 
-export const Header = ({ search,searchbar }) => {
+export const Header = ({ search,searchbar,not_logout }) => {
   return (
     <header className="w-full flex justify-between h-20 items-center bg-black p-4 border-b-2 border-gray-300">
       <div className=" ">
@@ -53,14 +53,16 @@ export const Header = ({ search,searchbar }) => {
           Profile
         </span>
       </div>
-          <ConnectButton />
+          <ConnectButton
+            not_logout={not_logout}
+          />
       <div className="  flex justify-end">
       
         <button
           onClick={() => {
             window.location.href="./uploads"
           }}
-          className=" text-white  py-2  rounded-lg flex px-4 justify-between flex-row items-center font-semibold"
+          className=" text-white  py-2  rounded-lg flex px-4 justify-between flex-row items-center text- font-bold"
         >
           
           <p className="ml-2">Upload</p>

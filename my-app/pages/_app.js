@@ -2,7 +2,7 @@
 
 import "../styles/globals.css";
 import { LivepeerConfig } from "@livepeer/react";
-import LivePeerClient from "./livepeer";
+import LivePeerClient from "../utils/livepeer";
 import { GlobalContext } from "../contexts/GlobalContext";
 import { Orbis } from "@orbisclub/orbis-sdk"
 import React, { useState, useEffect } from "react";

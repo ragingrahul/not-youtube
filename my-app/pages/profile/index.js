@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import Image from "next/image";
-import { subgraphQuery } from "../utils/client";
+import { subgraphQuery } from "../../utils/client";
 import { GET_VIDEOS } from "../../queries";
 import { Video } from "../../component/Video"
 import Player from "../../component/Player";

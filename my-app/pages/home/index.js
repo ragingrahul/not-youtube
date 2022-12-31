@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { subgraphQuery } from "../utils/client";
+import { subgraphQuery } from "../../utils/client";
 import { GET_VIDEOS } from "../../queries";
 import { Video } from "../../component/Video"
 import Player from "../../component/Player";
@@ -69,6 +69,7 @@ export default function Main() {
                         setSearch(e)
                     }}
                     searchbar={true}
+                    not_logout={true}
                 />
                 <div className="flex flex-row flex-wrap">
                     {videos.map((video) => (

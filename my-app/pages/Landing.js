@@ -1,5 +1,5 @@
 import React, { useState,useContext } from "react"
-import { sleep } from "./utils/sleep";
+
 
 import{GlobalContext}   from "../contexts/GlobalContext"
 import Image from "next/image"

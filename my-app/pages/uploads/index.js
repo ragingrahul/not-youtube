@@ -1,9 +1,9 @@
 import React, { useState, useRef } from "react";
 import { BiCloud, BiMusic, BiPlus } from "react-icons/bi";
 import { create } from "ipfs-http-client";
-import saveToIPFS from "../utils/saveToIPFS";
+import saveToIPFS from "../../utils/saveToIPFS";
 import { useCreateAsset } from "@livepeer/react";
-import getContract from "../utils/getContract";
+import getContract from "../../utils/getContract";
 import { Header } from "../../component/Header";
 
 export default function Upload() {

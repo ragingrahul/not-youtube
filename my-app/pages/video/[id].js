@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import {Video} from "../../component/Video"
 import {VideoComponent} from "../../component/VideoContainer";
 import { GET_RELATED_VIDEOS } from "../../queries";
-import { subgraphQuery } from "../utils/client";
+import { subgraphQuery } from "../../utils/client";
 import {useRouter} from "next/router"
 
 

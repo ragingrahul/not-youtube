@@ -1,10 +1,10 @@
 import React, { useState,useContext } from "react"
-import { sleep } from "../pages/utils/sleep";
+import { sleep } from "../utils/sleep";
 
 import{GlobalContext}   from "../contexts/GlobalContext"
 import Image from "next/image"
 
-export function ConnectButton(){
+export function ConnectButton({not_logout}){
     const {user,setUser,getTruncatedDID,orbis,status,setStatus}=useContext(GlobalContext)
 
     const connect=async()=>{
@@ -96,9 +96,12 @@ export function ConnectButton(){
                             </div>
                         }
                     </button>
-                    <button onClick={logout} className="text-white  py-2  rounded-lg flex px-4 justify-between flex-row items-center border-2 border-white">
-                    <p className="text-base font-semibold text-white">Logout</p>
-                    </button>
+                    {not_logout &&
+                        <button onClick={logout} className="text-white  py-2  rounded-lg flex px-4 justify-between flex-row items-center border-2 border-white">
+                        <p className="text-base font-semibold text-white">Logout</p>
+                        </button>
+                    }
+                    
                 </div>
             )
 
