@@ -26,6 +26,16 @@ export const Header = ({ search,searchbar }) => {
       <div className="  flex justify-center items-center">
         <span
           onClick={() => {
+            window.location.href = "../Landing"
+          }}
+          className="text-white font-bold text-9xl cursor-pointer"
+        >
+          Landing
+        </span>
+      </div>
+      <div className="  flex justify-center items-center">
+        <span
+          onClick={() => {
             window.location.href = "/home"
           }}
           className="text-white font-bold text-9xl cursor-pointer"
