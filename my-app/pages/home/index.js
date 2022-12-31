@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useApolloClient, gql } from "@apollo/client";
+
 import { subgraphQuery } from "../utils/client";
 import { GET_VIDEOS } from "../../queries";
 import { Video } from "../../component/Video"
@@ -30,7 +30,7 @@ export default function Main() {
 
     const searchVideo =async()=>{
         try {
-            console.log("entered search",search)
+            //console.log("entered search",search)
             const vids=await subgraphQuery(SEARCH_VIDEOS())
 
             console.log(vids)
@@ -62,12 +62,13 @@ export default function Main() {
         getVideos();
     }, [search]);
     return (
-        <div className="w-full bg-[#1a1c1f] flex flex-row">
+        <div className="w-full bg-black flex flex-row">
             <div className="flex-1 h-screen flex flex-col">
                 <Header 
                     search={(e)=>{
                         setSearch(e)
                     }}
+                    searchbar={true}
                 />
                 <div className="flex flex-row flex-wrap">
                     {videos.map((video) => (

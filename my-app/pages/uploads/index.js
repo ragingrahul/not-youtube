@@ -4,6 +4,7 @@ import { create } from "ipfs-http-client";
 import saveToIPFS from "../utils/saveToIPFS";
 import { useCreateAsset } from "@livepeer/react";
 import getContract from "../utils/getContract";
+import { Header } from "../../component/Header";
 
 export default function Upload() {
   // Creating state for the input field
@@ -80,18 +81,24 @@ export default function Upload() {
   }
 
   return (
-    <div className="w-full h-screen bg-[#1a1c1f] flex flex-row">
+    <div className="w-full h-screen bg-black flex flex-row">
       <div className="flex-1 flex flex-col">
+        <Header 
+          search={(e)=>{
+            setSearch(e)
+          }}
+          searchbar={false}
+        />
         <div className="mt-5 mr-10 flex  justify-end">
           <div className="flex items-center">
-            <button className="bg-transparent  text-[#9CA3AF] py-2 px-6 border rounded-lg  border-gray-600  mr-6">
+            <button className="border-2 border-white text-white  py-2  rounded-lg flex px-4 justify-between flex-row items-center">
               Discard
             </button>
             <button
               onClick={() => {
                 handleSubmit();
               }}
-              className="bg-blue-500 hover:bg-blue-700 text-white  py-2  rounded-lg flex px-4 justify-between flex-row items-center"
+              className="border-2 border-white text-white  py-2  rounded-lg flex px-4 justify-between flex-row items-center mx-2"
             >
               <BiCloud />
               <p className="ml-2">Upload</p>
@@ -104,15 +111,15 @@ export default function Upload() {
             <input
               value={title}
               onChange={(e) => setTitle(e.target.value)}
-              placeholder="Rick Astley - Never Gonna Give You Up (Official Music Video)"
-              className="w-[90%] text-white placeholder:text-gray-600  rounded-md mt-2 h-12 p-2 border  bg-[#1a1c1f] border-[#444752] focus:outline-none"
+              placeholder=""
+              className="w-[90%] text-white placeholder:text-gray-600  rounded-md mt-2 h-12 p-2 border  bg-black border-[#444752] focus:outline-none"
             />
             <label className="text-[#9CA3AF] mt-10">Description</label>
             <textarea
               value={description}
               onChange={(e) => setDescription(e.target.value)}
-              placeholder="Never Gonna Give You Up was a global smash on its release in July 1987, topping the charts in 25 countries including Rick’s native UK and the US Billboard Hot 100.  It also won the Brit Award for Best single in 1988. Stock Aitken and Waterman wrote and produced the track which was the lead-off single and lead track from Rick’s debut LP “Whenever You Need Somebody."
-              className="w-[90%] text-white h-32 placeholder:text-gray-600  rounded-md mt-2 p-2 border  bg-[#1a1c1f] border-[#444752] focus:outline-none"
+              placeholder=""
+              className="w-[90%] text-white h-32 placeholder:text-gray-600  rounded-md mt-2 p-2 border  bg-black border-[#444752] focus:outline-none"
             />
 
             <div className="flex flex-row mt-10 w-[90%]  justify-between">
@@ -122,8 +129,8 @@ export default function Upload() {
                   value={location}
                   onChange={(e) => setLocation(e.target.value)}
                   type="text"
-                  placeholder="Bali - Indonesia"
-                  className="w-[90%] text-white placeholder:text-gray-600  rounded-md mt-2 h-12 p-2 border  bg-[#1a1c1f] border-[#444752] focus:outline-none"
+                  placeholder=""
+                  className="w-[90%] text-white placeholder:text-gray-600  rounded-md mt-2 h-12 p-2 border  bg-black border-[#444752] focus:outline-none"
                 />
               </div>
               <div className="flex flex-col w-2/5    ">
@@ -131,7 +138,7 @@ export default function Upload() {
                 <select
                   value={category}
                   onChange={(e) => setCategory(e.target.value)}
-                  className="w-[90%] text-white placeholder:text-gray-600  rounded-md mt-2 h-12 p-2 border  bg-[#1a1c1f] border-[#444752] focus:outline-none"
+                  className="w-[90%] text-white placeholder:text-gray-600  rounded-md mt-2 h-12 p-2 border  bg-black border-[#444752] focus:outline-none"
                 >
                   <option>Music</option>
                   <option>Sports</option>
